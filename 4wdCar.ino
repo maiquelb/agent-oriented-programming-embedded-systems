@@ -10,14 +10,14 @@ void setup() {
   
   Serial.begin(9600);
   
-  // VELOCIDADE DOS MOTORES
+  // MOTOR VELOCITY
   motorFR.setSpeed(255);
   motorBR.setSpeed(255);
   motorFL.setSpeed(255);
   motorBL.setSpeed(255);
   
 
-  // INICIAM PARADOS
+  // starts with no movement
   motorFR.run(RELEASE);
   motorBR.run(RELEASE);
   motorFL.run(RELEASE);
