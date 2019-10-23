@@ -1,4 +1,12 @@
+#include <NewPing.h>
 #include <AFMotor.h>
+
+
+#define TRIGGER_PIN A5
+#define ECHO_PIN A0
+#define MAX_DISTANCE 200
+
+NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
 
   AF_DCMotor  motorFR(1);
   AF_DCMotor  motorBR(4);
@@ -8,16 +16,16 @@
 
 void setup() {
   
-  Serial.begin(9600);
+  Serial.begin(115200);
   
-  // MOTOR VELOCITY
+  // VELOCIDADE DOS MOTORES
   motorFR.setSpeed(255);
   motorBR.setSpeed(255);
   motorFL.setSpeed(255);
   motorBL.setSpeed(255);
   
 
-  // starts with no movement
+  // INICIAM PARADOS
   motorFR.run(RELEASE);
   motorBR.run(RELEASE);
   motorFL.run(RELEASE);
@@ -28,34 +36,19 @@ void setup() {
 
 void loop() {
 
-  delay(3000);
+  delay(500);
+  while(sonar.ping_cm() > 10){
+    
+   /* Serial.print("Ping: ");
+    Serial.print(sonar.ping_cm());
+    Serial.println("cm");
+   */
+    
+    moveForward();
+  }
   
-  moveForward();
-  delay(1000);
   halt();
-  delay(500);
-
-  moveRight();
-  delay(1600);
-  halt();
-  delay(500);
-
-  moveForward();
-  delay(800);
-  halt();
-  delay(500);
-  
-  //moveRight();
-  motorFL.run(BACKWARD);
-  motorBL.run(BACKWARD);
-  delay(3500);
-  halt();
-  delay(500);
-  
-  moveForward();
-  delay(1000);
-  halt();
-  delay(500);
+  delay(2000);
    
 }
   void moveForward() {
