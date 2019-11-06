@@ -16,7 +16,7 @@ Each folder has a different AOP implementation, currently we are developing a 4w
 ###### For the Raspberry part:
   *   [Raspbian](https://www.raspberrypi.org/downloads/raspbian/)
   *   [Pi4J](https://pi4j.com/1.2/install.html#EasyPreferred)
-
+  *   [Javino](https://sourceforge.net/projects/javino/)
 ## Built With
 
 * [JACAMO](http://jacamo.sourceforge.net/) - JAson, CArtago and MOise, used for AOP
