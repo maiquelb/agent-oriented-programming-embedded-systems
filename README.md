@@ -27,6 +27,7 @@ Each folder has a different AOP implementation, currently we are developing a 4w
 
 * **Maiquel de Brito** - *Research Project Supervisor* - http://lattes.cnpq.br/7806025869273339
 * **João Niche** - *Research Student* - [Nischeur](https://github.com/Nischeur)
+* **Lucas Bueno** - *Research Student*
 
 ## Acknowledgments
 
