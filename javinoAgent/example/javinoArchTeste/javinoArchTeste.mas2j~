@@ -1,0 +1,25 @@
+/*
+    javinoArchTeste
+    ---------------------------
+
+    Jason Project File
+
+    This file defines the initial state of the MAS
+
+    Jason 
+    novembro 27, 2019 - 14:28:15
+*/
+
+MAS javinoArchTeste {
+
+    infrastructure: Centralised
+
+    agents:
+        //teste agentArchClass javinoAgentArch.JavinoAgentArch;
+		//teste agentClass javinoAgentArch.JavinoAgent agentArchClass javinoAgentArch.JavinoAgentArch;
+		teste agentClass javinoAgentExample.JavinoAgentExample1 agentArchClass javinoAgentArch.JavinoAgentArch;
+
+		
+	classpath: "/home/maiquel/temp/javinoArch/javinoArchTeste/bin/javinoAgentArch.jar";
+}
+
