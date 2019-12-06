@@ -1,0 +1,23 @@
+/*
+    javinoInternalActionExample
+    ---------------------------
+
+    Jason Project File
+
+    This file defines the initial state of the MAS
+
+    Jason 
+    dezembro 06, 2019 - 15:50:30
+*/
+
+MAS javinoInternalActionExample {
+
+    infrastructure: Centralised
+
+    agents:
+        testAgent agentArchClass javinoAgentArch.JavinoAgentArch agentClass javinoAgentExample.JavinoAgentExample1;
+		
+	   classpath: "bin/javinoAgentArch.jar";
+
+}
+
